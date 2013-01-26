@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="1" datasource="dbInventory" kind="MS SQL Server" root="dbInventory">
+	<Table left="500" top="230" right="725" bottom="439" id="1" expanded="1">
+		<ColumnWidths col0="22.000000" col1="64.000000" col2="74.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Users" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="20" top="250" right="229" bottom="395" id="2" expanded="1">
+		<ColumnWidths col0="22.000000" col1="48.000000" col2="74.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Roles" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="490" top="20" right="729" bottom="149" id="3" expanded="1">
+		<ColumnWidths col0="22.000000" col1="84.000000" col2="68.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ApplicationRoles" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="20" top="20" right="232" bottom="165" id="4" expanded="1">
+		<ColumnWidths col0="22.000000" col1="51.000000" col2="74.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Applications" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Line left="234" top="373" right="494" bottom="417" fromObj="1" toObj="2" XPos="309" labelX="-41">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Users" Kind="Table"/>
+			<PathElement Name="FK_Users_Roles" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Roles" Kind="Table"/>
+			<PathElement Name="PK_Roles" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="234" top="127" right="484" bottom="373" fromObj="3" toObj="2" XPos="368" labelX="-102">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ApplicationRoles" Kind="Table"/>
+			<PathElement Name="FK_ApplicationRoles_Applications" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Roles" Kind="Table"/>
+			<PathElement Name="PK_Roles" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="237" top="127" right="484" bottom="143" fromObj="3" toObj="4" XPos="361" labelX="-92">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ApplicationRoles" Kind="Table"/>
+			<PathElement Name="FK_ApplicationRoles_Roles" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Applications" Kind="Table"/>
+			<PathElement Name="PK_Applications" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+</Design>

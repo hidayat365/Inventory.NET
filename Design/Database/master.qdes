@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="1" datasource="dbInventory" kind="MS SQL Server" root="dbInventory">
+	<Line left="299" top="786" right="394" bottom="809" fromObj="4" toObj="3" XPos="347" labelX="-107">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ItemInventories" Kind="Table"/>
+			<PathElement Name="FK_ItemInventories_Warehouse" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Warehouses" Kind="Table"/>
+			<PathElement Name="PK_Warehouses" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="294" top="452" right="464" bottom="503" fromObj="5" toObj="2" XPos="359" labelX="-60">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+			<PathElement Name="FK_Items_UnitMeasures" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="UnitMeasures" Kind="Table"/>
+			<PathElement Name="PK_UnitMeasures" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="301" top="193" right="464" bottom="419" fromObj="5" toObj="1" XPos="363" labelX="-72">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+			<PathElement Name="FK_Items_Categories" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ItemCategories" Kind="Table"/>
+			<PathElement Name="PK_ItemCategories" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Table left="-10" top="20" right="296" bottom="233" id="1" expanded="1">
+		<ColumnWidths col0="22.000000" col1="132.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ItemCategories" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="-10" top="330" right="289" bottom="543" id="2" expanded="1">
+		<ColumnWidths col0="22.000000" col1="125.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="UnitMeasures" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table top="620" right="294" bottom="849" id="3" expanded="1">
+		<ColumnWidths col0="22.000000" col1="120.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Warehouses" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="400" top="580" right="780" bottom="825" id="4" expanded="1">
+		<ColumnWidths col0="22.000000" col1="163.000000" col2="88.000000" col3="87.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ItemInventories" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="470" top="20" right="718" bottom="491" id="5" expanded="1">
+		<ColumnWidths col0="22.000000" col1="81.000000" col2="80.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Line left="723" top="385" right="868" bottom="753" fromObj="4" toObj="5" XPos="868" labelX="-66">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="ItemInventories" Kind="Table"/>
+			<PathElement Name="FK_ItemInventories_Items" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+			<PathElement Name="PK_Items" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Table left="930" top="20" right="1244" bottom="537" id="6" expanded="1">
+		<ColumnWidths col0="22.000000" col1="140.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Companies" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="940" top="620" right="1223" bottom="833" id="7" expanded="1">
+		<ColumnWidths col0="22.000000" col1="109.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Currencies" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+</Design>

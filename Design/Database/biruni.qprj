@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  DatabaseSpy Project File  -->
+<Project Version="2" Expanded="Yes" Type="Root" Title="solosoft">
+	<Folder FolderName="Data Sources" Expanded="Yes" Type="DataSourceFolder">
+		<datasource database_kind="MS SQL Server" import_kind="ADO" version="09.00.3042" name="dbInventory" active="Yes" Type="DataSourceItem">
+			<properties>
+				<property name="Database Kind" value="MS SQL Server"/>
+				<property name="Import Kind" value="ADO"/>
+				<property name="Root Object" value="dbInventory"/>
+				<property name="Data Source" value="(local)\sqlexpress"/>
+				<property name="Provider" value="SQLNCLI.1"/>
+				<property name="User ID" value="solosoft"/>
+				<property name="Password"/>
+				<property name="Persist Security Info" value="false"/>
+				<property name="Auto Translate" value="false"/>
+				<property name="Connect Timeout"/>
+				<property name="Current Language"/>
+				<property name="Extended Properties"/>
+				<property name="General Timeout"/>
+				<property name="Initial Catalog" value="dbInventory"/>
+				<property name="Initial File Name"/>
+				<property name="Integrated Security" value="SSPI"/>
+				<property name="Locale Identifier"/>
+				<property name="Network Address"/>
+				<property name="Network Library"/>
+				<property name="Packet Size"/>
+				<property name="Replication server name"/>
+				<property name="Tag with column collation" value="false"/>
+				<property name="Use Encryption for Data" value="false"/>
+				<property name="User Procedure for Prepare"/>
+				<property name="Workstation ID"/>
+				<property name="Mars_Connection" value="false"/>
+			</properties>
+			<LocalViewStorage/>
+			<LocalRelationsStorage/>
+		</datasource>
+	</Folder>
+	<Folder FolderName="SQL" Type="SQLRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize SQL files for this project." blockingstrategy="semi"/>
+	<Folder FolderName="Design" Expanded="Yes" Type="DesignRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize Design files for this project.">
+		<File Type="DesignFile" FilePath="main.qdes" datasource_override="Yes" root_override="Yes" databasekind_override="Yes" database_kind="MS SQL Server" datasource="dbInventory" rootobject="dbInventory" schema="dbo" description="Store and organize Design files for this project."/>
+		<File Type="DesignFile" FilePath="master.qdes" datasource_override="Yes" root_override="Yes" databasekind_override="Yes" database_kind="MS SQL Server" datasource="dbInventory" rootobject="dbInventory" schema="dbo" description="Store and organize Design files for this project."/>
+		<File Type="DesignFile" FilePath="security.qdes" datasource_override="Yes" root_override="Yes" databasekind_override="Yes" database_kind="MS SQL Server" datasource="dbInventory" rootobject="dbInventory" schema="dbo" description="Store and organize Design files for this project."/>
+	</Folder>
+	<Folder FolderName="Data Diff" Type="DataDiffRootFolder"/>
+	<Folder FolderName="Schema Diff" Type="SchemaDiffRootFolder"/>
+	<Folder FolderName="Favorites" Type="FavoriteFolder"/>
+</Project>

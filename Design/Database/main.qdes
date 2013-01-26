@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="1" datasource="dbInventory" kind="MS SQL Server" root="dbInventory">
+	<Table right="301" bottom="517" id="1" expanded="1">
+		<ColumnWidths col0="22.000000" col1="140.000000" col2="74.000000" col3="45.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Companies" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Line left="306" top="335" right="404" bottom="477" fromObj="5" toObj="1" XPos="372" labelX="-22" labelY="27">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+			<PathElement Name="FK_Orders_Companies" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Companies" Kind="Table"/>
+			<PathElement Name="PK_Companies" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="736" top="253" right="934" bottom="478" fromObj="5" toObj="3" XPos="845" labelX="-55" labelY="-57">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+			<PathElement Name="FK_Orders_Currencies" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Currencies" Kind="Table"/>
+			<PathElement Name="PK_Currencies" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="762" top="705" right="934" bottom="751" fromObj="4" toObj="2" XPos="878" labelX="-78" labelY="-6">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="OrderDetails" Kind="Table"/>
+			<PathElement Name="FK_OrderDetails_Items" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+			<PathElement Name="PK_Items" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+	<Line left="735" top="11" right="778" bottom="401" fromObj="5" toObj="5" XPos="778" labelX="-48" labelY="-66">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+			<PathElement Name="FK_Orders_Parent" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+		</ObjectPathTo>
+	</Line>
+	<Table left="940" top="340" right="1286" bottom="811" id="2" expanded="1">
+		<ColumnWidths col0="22.000000" col1="123.000000" col2="80.000000" col3="101.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Items" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="940" top="80" right="1223" bottom="293" id="3" expanded="1">
+		<ColumnWidths col0="22.000000" col1="109.000000" col2="74.000000" col3="58.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Currencies" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="450" top="530" right="756" bottom="823" id="4" expanded="1">
+		<ColumnWidths col0="22.000000" col1="124.000000" col2="80.000000" col3="60.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="OrderDetails" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="410" right="730" bottom="440" id="5" expanded="1">
+		<ColumnWidths col0="22.000000" col1="116.000000" col2="83.000000" col3="79.000000" col4="20.000000"/>
+		<CollapsedCompartments CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Line left="735" top="285" right="819" bottom="784" fromObj="4" toObj="5" XPos="819" labelX="-65" labelY="95">
+		<ObjectPathFrom>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="OrderDetails" Kind="Table"/>
+			<PathElement Name="FK_OrderDetails_Orders" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="dbo" Kind="Schema"/>
+			<PathElement Name="Orders" Kind="Table"/>
+			<PathElement Name="PK_Orders" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+</Design>
