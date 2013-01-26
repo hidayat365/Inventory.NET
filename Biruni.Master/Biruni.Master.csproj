@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB5C003E-D6FA-43AD-8AD4-1F0E21205E95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Biruni.Master</RootNamespace>
+    <AssemblyName>Biruni.Master</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1BarCode.2, Version=2.0.20113.49, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.6.20113.647, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20113.33270, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20113.189, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.2, Version=2.0.20113.351, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20113.61237, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entry\frmCompanyBalanceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmCompanyBalanceEntry.Designer.cs">
+      <DependentUpon>frmCompanyBalanceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmDeveloperEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmDeveloperEntry.Designer.cs">
+      <DependentUpon>frmDeveloperEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmOwnerEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmOwnerEntry.Designer.cs">
+      <DependentUpon>frmOwnerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmCompanyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmCompanyEntry.Designer.cs">
+      <DependentUpon>frmCompanyEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmCurrencyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmCurrencyEntry.Designer.cs">
+      <DependentUpon>frmCurrencyEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmItemCategoryEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmItemCategoryEntry.Designer.cs">
+      <DependentUpon>frmItemCategoryEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmItemEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmItemEntry.Designer.cs">
+      <DependentUpon>frmItemEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmUnitMeasureEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmUnitMeasureEntry.Designer.cs">
+      <DependentUpon>frmUnitMeasureEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry\frmWarehouseEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entry\frmWarehouseEntry.Designer.cs">
+      <DependentUpon>frmWarehouseEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmCompanyBalanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmCompanyBalanceList.Designer.cs">
+      <DependentUpon>frmCompanyBalanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmCompanyList.Designer.cs">
+      <DependentUpon>frmCompanyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmCurrencyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmCurrencyList.Designer.cs">
+      <DependentUpon>frmCurrencyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmItemCategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmItemCategoryList.Designer.cs">
+      <DependentUpon>frmItemCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmItemList.Designer.cs">
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmUnitMeasureList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmUnitMeasureList.Designer.cs">
+      <DependentUpon>frmUnitMeasureList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\frmWarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\frmWarehouseList.Designer.cs">
+      <DependentUpon>frmWarehouseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\frmCompanySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmCompanySearch.Designer.cs">
+      <DependentUpon>frmCompanySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmCurrencySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmCurrencySearch.Designer.cs">
+      <DependentUpon>frmCurrencySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmItemCategorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmItemCategorySearch.Designer.cs">
+      <DependentUpon>frmItemCategorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmItemSearch.Designer.cs">
+      <DependentUpon>frmItemSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmUnitMeasureSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmUnitMeasureSearch.Designer.cs">
+      <DependentUpon>frmUnitMeasureSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmWarehouseSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmWarehouseSearch.Designer.cs">
+      <DependentUpon>frmWarehouseSearch.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biruni.Reports\Biruni.Reports.csproj">
+      <Project>{CB7A22D6-6BA7-448C-9749-E413AD87AE75}</Project>
+      <Name>Biruni.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biruni.Shared\Biruni.Shared.csproj">
+      <Project>{3BC5A1ED-D927-4751-AB14-E106B1D5ACB6}</Project>
+      <Name>Biruni.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Entry\frmCompanyBalanceEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCompanyBalanceEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmDeveloperEntry.resx">
+      <DependentUpon>frmDeveloperEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmOwnerEntry.resx">
+      <DependentUpon>frmOwnerEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmCompanyEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCompanyEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmCurrencyEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCurrencyEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmItemCategoryEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemCategoryEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmItemEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmUnitMeasureEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUnitMeasureEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entry\frmWarehouseEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWarehouseEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmCompanyBalanceList.resx">
+      <DependentUpon>frmCompanyBalanceList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmCompanyList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCompanyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmCurrencyList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCurrencyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmItemCategoryList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmItemList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmUnitMeasureList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUnitMeasureList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\frmWarehouseList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWarehouseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Search\frmItemSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmItemSearch.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
