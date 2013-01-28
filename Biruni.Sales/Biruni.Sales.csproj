@@ -89,12 +89,6 @@
     <Compile Include="Entry\frmSalesQuotationEntry.Designer.cs">
       <DependentUpon>frmSalesQuotationEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="List\frmSalesInvoiceList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +151,6 @@
     <EmbeddedResource Include="Entry\frmSalesQuotationEntry.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSalesQuotationEntry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List\frmSalesInvoiceList.resx">
       <SubType>Designer</SubType>

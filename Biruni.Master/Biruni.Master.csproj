@@ -119,12 +119,6 @@
     <Compile Include="Entry\frmWarehouseEntry.Designer.cs">
       <DependentUpon>frmWarehouseEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="List\frmCompanyBalanceList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,9 +245,6 @@
     <EmbeddedResource Include="Entry\frmWarehouseEntry.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmWarehouseEntry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List\frmCompanyBalanceList.resx">
       <DependentUpon>frmCompanyBalanceList.cs</DependentUpon>

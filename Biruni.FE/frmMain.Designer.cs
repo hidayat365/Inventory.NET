@@ -123,8 +123,10 @@ namespace Biruni.FE
             // 
             this.c1Ribbon1.ApplicationMenuHolder = this.ribbonApplicationMenu1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
+            this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
+            this.c1Ribbon1.Size = new System.Drawing.Size(795, 153);
             this.c1Ribbon1.Tabs.Add(this.tabTransactions);
             this.c1Ribbon1.Tabs.Add(this.tabMaster);
             this.c1Ribbon1.Tabs.Add(this.tabReporting);
@@ -677,12 +679,14 @@ namespace Biruni.FE
             // c1StatusBar1
             // 
             this.c1StatusBar1.LeftPaneItems.Add(this.ribbonLabel4);
+            this.c1StatusBar1.Location = new System.Drawing.Point(0, 491);
             this.c1StatusBar1.Name = "c1StatusBar1";
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonLabel3);
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonSeparator2);
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonLabel1);
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonSeparator1);
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonLabel2);
+            this.c1StatusBar1.Size = new System.Drawing.Size(795, 23);
             // 
             // ribbonLabel4
             // 
