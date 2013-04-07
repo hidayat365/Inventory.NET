@@ -1,11 +1,8 @@
+// Remove unused Namespace By K
 using System;
 using System.Globalization;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using C1.Win.C1FlexGrid;
 using Biruni.Reports;
@@ -16,7 +13,7 @@ using Biruni.Master.Search;
 
 namespace Biruni.Sales.Entry
 {
-    public partial class frmSalesQuotationEntry : Biruni.Shared.Templates.frmEntry2
+    public partial class frmSalesQuotationEntry : Shared.Templates.frmEntry2
     {
         public frmSalesQuotationEntry()
         {
@@ -388,6 +385,17 @@ namespace Biruni.Sales.Entry
                 // End editing
                 BindingContext[dsCore1, "Orders"].EndCurrentEdit();
                 BindingContext[dsCore1, "OrderDetails"].EndCurrentEdit();
+
+                
+                // Validaton Check order detail item -> by K
+                if (dsCore1.OrderDetails.Rows.Count == 0)
+                {
+                    RibbonMessageBox.Show("No item inventory in this order\n" +
+                        "Please input item at least one item\n",
+                        Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // End Validation -> by K
 
                 // There are changes that need to be made, so attempt to update the datasource by
                 // calling the update method and passing the dataset and any parameters.
