@@ -1,11 +1,8 @@
+// Remove unused Namespace By K
 using System;
 using System.Globalization;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using C1.Win.C1FlexGrid;
 using Biruni.Reports;
@@ -16,7 +13,7 @@ using Biruni.Master.Search;
 
 namespace Biruni.Sales.Entry
 {
-    public partial class frmSalesQuotationEntry : Biruni.Shared.Templates.frmEntry2
+    public partial class frmSalesQuotationEntry : Shared.Templates.frmEntry2
     {
         public frmSalesQuotationEntry()
         {
@@ -389,6 +386,17 @@ namespace Biruni.Sales.Entry
                 BindingContext[dsCore1, "Orders"].EndCurrentEdit();
                 BindingContext[dsCore1, "OrderDetails"].EndCurrentEdit();
 
+                
+                // Validaton Check order detail item -> by K
+                if (dsCore1.OrderDetails.Rows.Count == 0)
+                {
+                    RibbonMessageBox.Show("No item inventory in this order\n" +
+                        "Please input item at least one item\n",
+                        Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // End Validation -> by K
+
                 // There are changes that need to be made, so attempt to update the datasource by
                 // calling the update method and passing the dataset and any parameters.
                 if (txMode == DataEntryModes.Add)
@@ -398,10 +406,15 @@ namespace Biruni.Sales.Entry
                     // AcceptChanges padahal belum diupdate ke database 
                     dsChanges = new dsCore();
                     dsChanges.EnforceConstraints = false;
-                    dsChanges.Orders.Rows.Add(((DataRowView)this.BindingContext[dsCore1, "Orders"].Current).Row.ItemArray);
+
+                    // Possible NULL value dataRowView .:By K:.
+                    var dataRowView = (DataRowView) BindingContext[dsCore1, "Orders"].Current;
+                    if (dataRowView != null)
+                        dsChanges.Orders.Rows.Add(dataRowView.Row.ItemArray);
+
 
                     // copy juga detail record dari main dataset
-                    for (int i = 0; i < dsCore1.OrderDetails.Rows.Count; i++)
+                    for (var i = 0; i < dsCore1.OrderDetails.Rows.Count; i++)
                         dsChanges.OrderDetails.Rows.Add(dsCore1.OrderDetails.Rows[i].ItemArray);
 
                     // persist changes to database
