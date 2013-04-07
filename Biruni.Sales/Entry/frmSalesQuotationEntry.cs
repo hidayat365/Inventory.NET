@@ -406,10 +406,15 @@ namespace Biruni.Sales.Entry
                     // AcceptChanges padahal belum diupdate ke database 
                     dsChanges = new dsCore();
                     dsChanges.EnforceConstraints = false;
-                    dsChanges.Orders.Rows.Add(((DataRowView)this.BindingContext[dsCore1, "Orders"].Current).Row.ItemArray);
+
+                    // Possible NULL value dataRowView .:By K:.
+                    var dataRowView = (DataRowView) BindingContext[dsCore1, "Orders"].Current;
+                    if (dataRowView != null)
+                        dsChanges.Orders.Rows.Add(dataRowView.Row.ItemArray);
+
 
                     // copy juga detail record dari main dataset
-                    for (int i = 0; i < dsCore1.OrderDetails.Rows.Count; i++)
+                    for (var i = 0; i < dsCore1.OrderDetails.Rows.Count; i++)
                         dsChanges.OrderDetails.Rows.Add(dsCore1.OrderDetails.Rows[i].ItemArray);
 
                     // persist changes to database
