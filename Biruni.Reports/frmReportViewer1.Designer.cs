@@ -40,7 +40,6 @@ namespace Biruni.Reports
             // 
             this._viewer.ActiveViewIndex = -1;
             this._viewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._viewer.DisplayGroupTree = false;
             this._viewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this._viewer.Location = new System.Drawing.Point(0, 39);
             this._viewer.Name = "_viewer";

@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biruni.FE", "Biruni.FE\Biruni.FE.csproj", "{4A4D8DD3-F1D2-4FE7-8CC1-C6981BC5B769}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biruni.Shared", "Biruni.Shared\Biruni.Shared.csproj", "{3BC5A1ED-D927-4751-AB14-E106B1D5ACB6}"
@@ -16,8 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biruni.Inventory", "Biruni.Inventory\Biruni.Inventory.csproj", "{6607ABEA-8857-425C-AA4B-80052C08C07A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biruni.Security", "Biruni.Security\Biruni.Security.csproj", "{1D0B0DCD-F4B5-4291-B852-87C2CFFED735}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Biruni.Setup", "Biruni.Setup\Biruni.Setup.vdproj", "{0C7FADE1-889B-48E7-BBAA-B65D174EE1BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biruni.Licensing", "Biruni.Licensing\Biruni.Licensing.csproj", "{B97ED990-BE07-4A2C-B555-D2E6DC5FA6B8}"
 EndProject
@@ -59,8 +59,6 @@ Global
 		{1D0B0DCD-F4B5-4291-B852-87C2CFFED735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0B0DCD-F4B5-4291-B852-87C2CFFED735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0B0DCD-F4B5-4291-B852-87C2CFFED735}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C7FADE1-889B-48E7-BBAA-B65D174EE1BB}.Debug|Any CPU.ActiveCfg = Debug
-		{0C7FADE1-889B-48E7-BBAA-B65D174EE1BB}.Release|Any CPU.ActiveCfg = Release
 		{B97ED990-BE07-4A2C-B555-D2E6DC5FA6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B97ED990-BE07-4A2C-B555-D2E6DC5FA6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97ED990-BE07-4A2C-B555-D2E6DC5FA6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
