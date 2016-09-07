@@ -1303,6 +1303,7 @@ namespace Biruni.Shared.Data {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DenormalizedOrdersRow AddDenormalizedOrdersRow(
+                        int ID, 
                         string OrderNo, 
                         string OrderType, 
                         double OrderValue, 
@@ -1326,6 +1327,7 @@ namespace Biruni.Shared.Data {
                         int WarehouseID, 
                         string WarehouseCode, 
                         string WarehouseName, 
+                        int DetailID, 
                         int ItemID, 
                         string ItemCode, 
                         string ItemName, 
@@ -1364,7 +1366,7 @@ namespace Biruni.Shared.Data {
                         double ReferenceValue) {
                 DenormalizedOrdersRow rowDenormalizedOrdersRow = ((DenormalizedOrdersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         OrderNo,
                         OrderType,
                         OrderValue,
@@ -1388,7 +1390,7 @@ namespace Biruni.Shared.Data {
                         WarehouseID,
                         WarehouseCode,
                         WarehouseName,
-                        null,
+                        DetailID,
                         ItemID,
                         ItemCode,
                         ItemName,
@@ -1641,12 +1643,8 @@ namespace Biruni.Shared.Data {
                 base.Columns.Add(this.columnReferenceDate);
                 this.columnReferenceValue = new global::System.Data.DataColumn("ReferenceValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReferenceValue);
-                this.columnID.AutoIncrement = true;
-                this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
-                this.columnOrderNo.AllowDBNull = false;
                 this.columnOrderNo.MaxLength = 50;
-                this.columnOrderType.AllowDBNull = false;
                 this.columnOrderType.MaxLength = 5;
                 this.columnDeliveryNumber.MaxLength = 100;
                 this.columnRemarks.MaxLength = 5000;
@@ -1658,19 +1656,12 @@ namespace Biruni.Shared.Data {
                 this.columnCurrencyName.MaxLength = 255;
                 this.columnWarehouseCode.MaxLength = 50;
                 this.columnWarehouseName.MaxLength = 255;
-                this.columnDetailID.AutoIncrement = true;
-                this.columnDetailID.AllowDBNull = false;
                 this.columnDetailID.ReadOnly = true;
-                this.columnItemCode.AllowDBNull = false;
                 this.columnItemCode.MaxLength = 50;
-                this.columnItemName.AllowDBNull = false;
                 this.columnItemName.MaxLength = 100;
                 this.columnSpecification.MaxLength = 2000;
                 this.columnMeasureCode.MaxLength = 50;
                 this.columnMeasureName.MaxLength = 255;
-                this.columnQuantity.AllowDBNull = false;
-                this.columnUnitPrice.AllowDBNull = false;
-                this.columnTaxPct.AllowDBNull = false;
                 this.columnDetailRemarks.MaxLength = 2000;
                 this.columnPhoneOffice.MaxLength = 25;
                 this.columnPhoneAlternate.MaxLength = 25;
@@ -1689,9 +1680,7 @@ namespace Biruni.Shared.Data {
                 this.columnShippingAddressCountry.MaxLength = 100;
                 this.columnShippingContactPerson.MaxLength = 100;
                 this.columnShippingContactPhone.MaxLength = 100;
-                this.columnCategoryCode.AllowDBNull = false;
                 this.columnCategoryCode.MaxLength = 50;
-                this.columnCategoryName.AllowDBNull = false;
                 this.columnCategoryName.MaxLength = 255;
                 this.columnCompleted.ReadOnly = true;
             }
@@ -6164,7 +6153,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableDenormalizedOrders.IDColumn]));
+                    try {
+                        return ((int)(this[this.tableDenormalizedOrders.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.IDColumn] = value;
@@ -6175,7 +6169,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string OrderNo {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.OrderNoColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.OrderNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrderNo\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.OrderNoColumn] = value;
@@ -6186,7 +6185,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string OrderType {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.OrderTypeColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.OrderTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrderType\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.OrderTypeColumn] = value;
@@ -6533,7 +6537,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int DetailID {
                 get {
-                    return ((int)(this[this.tableDenormalizedOrders.DetailIDColumn]));
+                    try {
+                        return ((int)(this[this.tableDenormalizedOrders.DetailIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DetailID\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.DetailIDColumn] = value;
@@ -6560,7 +6569,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ItemCode {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.ItemCodeColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.ItemCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.ItemCodeColumn] = value;
@@ -6571,7 +6585,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ItemName {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.ItemNameColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.ItemNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemName\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.ItemNameColumn] = value;
@@ -6646,7 +6665,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Quantity {
                 get {
-                    return ((double)(this[this.tableDenormalizedOrders.QuantityColumn]));
+                    try {
+                        return ((double)(this[this.tableDenormalizedOrders.QuantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.QuantityColumn] = value;
@@ -6657,7 +6681,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double UnitPrice {
                 get {
-                    return ((double)(this[this.tableDenormalizedOrders.UnitPriceColumn]));
+                    try {
+                        return ((double)(this[this.tableDenormalizedOrders.UnitPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UnitPrice\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.UnitPriceColumn] = value;
@@ -6668,7 +6697,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double TaxPct {
                 get {
-                    return ((double)(this[this.tableDenormalizedOrders.TaxPctColumn]));
+                    try {
+                        return ((double)(this[this.tableDenormalizedOrders.TaxPctColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TaxPct\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.TaxPctColumn] = value;
@@ -6997,7 +7031,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string CategoryCode {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.CategoryCodeColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.CategoryCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CategoryCode\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.CategoryCodeColumn] = value;
@@ -7008,7 +7047,12 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string CategoryName {
                 get {
-                    return ((string)(this[this.tableDenormalizedOrders.CategoryNameColumn]));
+                    try {
+                        return ((string)(this[this.tableDenormalizedOrders.CategoryNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CategoryName\' in table \'DenormalizedOrders\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDenormalizedOrders.CategoryNameColumn] = value;
@@ -7137,6 +7181,42 @@ namespace Biruni.Shared.Data {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Orders_Currencies"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableDenormalizedOrders.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableDenormalizedOrders.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOrderNoNull() {
+                return this.IsNull(this.tableDenormalizedOrders.OrderNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOrderNoNull() {
+                this[this.tableDenormalizedOrders.OrderNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOrderTypeNull() {
+                return this.IsNull(this.tableDenormalizedOrders.OrderTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOrderTypeNull() {
+                this[this.tableDenormalizedOrders.OrderTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7393,6 +7473,18 @@ namespace Biruni.Shared.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDetailIDNull() {
+                return this.IsNull(this.tableDenormalizedOrders.DetailIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDetailIDNull() {
+                this[this.tableDenormalizedOrders.DetailIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsItemIDNull() {
                 return this.IsNull(this.tableDenormalizedOrders.ItemIDColumn);
             }
@@ -7401,6 +7493,30 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetItemIDNull() {
                 this[this.tableDenormalizedOrders.ItemIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsItemCodeNull() {
+                return this.IsNull(this.tableDenormalizedOrders.ItemCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetItemCodeNull() {
+                this[this.tableDenormalizedOrders.ItemCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsItemNameNull() {
+                return this.IsNull(this.tableDenormalizedOrders.ItemNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetItemNameNull() {
+                this[this.tableDenormalizedOrders.ItemNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7449,6 +7565,42 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMeasureNameNull() {
                 this[this.tableDenormalizedOrders.MeasureNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQuantityNull() {
+                return this.IsNull(this.tableDenormalizedOrders.QuantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQuantityNull() {
+                this[this.tableDenormalizedOrders.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUnitPriceNull() {
+                return this.IsNull(this.tableDenormalizedOrders.UnitPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUnitPriceNull() {
+                this[this.tableDenormalizedOrders.UnitPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTaxPctNull() {
+                return this.IsNull(this.tableDenormalizedOrders.TaxPctColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTaxPctNull() {
+                this[this.tableDenormalizedOrders.TaxPctColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7677,6 +7829,30 @@ namespace Biruni.Shared.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCategoryIDNull() {
                 this[this.tableDenormalizedOrders.CategoryIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoryCodeNull() {
+                return this.IsNull(this.tableDenormalizedOrders.CategoryCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoryCodeNull() {
+                this[this.tableDenormalizedOrders.CategoryCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoryNameNull() {
+                return this.IsNull(this.tableDenormalizedOrders.CategoryNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoryNameNull() {
+                this[this.tableDenormalizedOrders.CategoryNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12022,7 +12198,7 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual int FillByDate(dsReports.DenormalizedOrdersDataTable dataTable, string type, global::System.Nullable<global::System.DateTime> date1, global::System.Nullable<global::System.DateTime> date2) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(type));
@@ -12053,7 +12229,7 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual dsReports.DenormalizedOrdersDataTable GetDataByDate(string type, global::System.Nullable<global::System.DateTime> date1, global::System.Nullable<global::System.DateTime> date2) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(type));
@@ -12079,9 +12255,14 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByID(dsReports.DenormalizedOrdersDataTable dataTable, int p1) {
+        public virtual int FillByID(dsReports.DenormalizedOrdersDataTable dataTable, global::System.Nullable<int> p1) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p1));
+            if ((p1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -12093,9 +12274,14 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dsReports.DenormalizedOrdersDataTable GetDataByID(int p1) {
+        public virtual dsReports.DenormalizedOrdersDataTable GetDataByID(global::System.Nullable<int> p1) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p1));
+            if ((p1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             dsReports.DenormalizedOrdersDataTable dataTable = new dsReports.DenormalizedOrdersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -12144,13 +12330,13 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual int FillByOrderNo(dsReports.DenormalizedOrdersDataTable dataTable, string OrderNo, string OrderType) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((OrderNo == null)) {
-                throw new global::System.ArgumentNullException("OrderNo");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OrderNo));
             }
             if ((OrderType == null)) {
-                throw new global::System.ArgumentNullException("OrderType");
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(OrderType));
@@ -12169,13 +12355,13 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual dsReports.DenormalizedOrdersDataTable GetDataByOrderNo(string OrderNo, string OrderType) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((OrderNo == null)) {
-                throw new global::System.ArgumentNullException("OrderNo");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OrderNo));
             }
             if ((OrderType == null)) {
-                throw new global::System.ArgumentNullException("OrderType");
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(OrderType));
@@ -12288,7 +12474,7 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual int FillNotCompleted(dsReports.DenormalizedOrdersDataTable dataTable, string type, global::System.Nullable<global::System.DateTime> date1, global::System.Nullable<global::System.DateTime> date2) {
             this.Adapter.SelectCommand = this.CommandCollection[7];
             if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(type));
@@ -12319,7 +12505,7 @@ WHERE     (Orders.OrderType = 'SQ') AND (Orders.OrderDate BETWEEN @date1 AND @da
         public virtual dsReports.DenormalizedOrdersDataTable GetDataNotCompleted(string type, global::System.Nullable<global::System.DateTime> date1, global::System.Nullable<global::System.DateTime> date2) {
             this.Adapter.SelectCommand = this.CommandCollection[7];
             if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(type));

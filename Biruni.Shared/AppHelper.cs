@@ -29,7 +29,7 @@ namespace Biruni.Shared
             cnbuild.DataSource = dbServer;
             cnbuild.InitialCatalog = dbName;
             cnbuild.UserID = dbUser;
-            cnbuild.Password = "getdown";
+            cnbuild.Password = dbPassword;
             return new SqlConnection(cnbuild.ConnectionString);
         }
 
