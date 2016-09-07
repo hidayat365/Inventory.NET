@@ -39,8 +39,10 @@ namespace Biruni.FE
             this.StartPosition = FormStartPosition.Manual;
             this.Top = 0;
             this.Left = 0;
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
-            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = 800;
+            this.Height = 480;
+            //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
             this.ribbonLabel3.Text = "User: " + AppHelper.appUserName + " - Logged As: " + AppHelper.appRoleName;
             this.ribbonLabel1.Text = "Connected to: " + AppHelper.dbServer + " (" + AppHelper.dbName + ")";
             this.ribbonLabel4.Text = Application.ProductName + " (Version: " + Application.ProductVersion + ")";

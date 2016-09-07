@@ -126,7 +126,7 @@ namespace Biruni.FE
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(795, 153);
+            this.c1Ribbon1.Size = new System.Drawing.Size(795, 150);
             this.c1Ribbon1.Tabs.Add(this.tabTransactions);
             this.c1Ribbon1.Tabs.Add(this.tabMaster);
             this.c1Ribbon1.Tabs.Add(this.tabReporting);
@@ -679,7 +679,7 @@ namespace Biruni.FE
             // c1StatusBar1
             // 
             this.c1StatusBar1.LeftPaneItems.Add(this.ribbonLabel4);
-            this.c1StatusBar1.Location = new System.Drawing.Point(0, 491);
+            this.c1StatusBar1.Location = new System.Drawing.Point(0, 342);
             this.c1StatusBar1.Name = "c1StatusBar1";
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonLabel3);
             this.c1StatusBar1.RightPaneItems.Add(this.ribbonSeparator2);
@@ -735,7 +735,7 @@ namespace Biruni.FE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 514);
+            this.ClientSize = new System.Drawing.Size(795, 365);
             this.Controls.Add(this.c1StatusBar1);
             this.Controls.Add(this.c1Ribbon1);
             this.DoubleBuffered = true;
