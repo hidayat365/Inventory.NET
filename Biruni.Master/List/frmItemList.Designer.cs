@@ -64,15 +64,17 @@ namespace Biruni.Master.List
             this._grid.Caption = "Item Master List";
             this._grid.DataMember = "Items";
             this._grid.DataSource = this.dsCore1;
-            this._grid.Images.Add(((System.Drawing.Image)(resources.GetObject("_grid.Images"))));
             this._grid.PreviewInfo.Location = new System.Drawing.Point(0, 0);
             this._grid.PreviewInfo.Size = new System.Drawing.Size(0, 0);
-            this._grid.PreviewInfo.ZoomFactor = 75;
+            this._grid.PreviewInfo.ZoomFactor = 75D;
             this._grid.PrintInfo.PageSettings = ((System.Drawing.Printing.PageSettings)(resources.GetObject("_grid.PrintInfo.PageSettings")));
+            this._grid.Size = new System.Drawing.Size(632, 288);
             this._grid.PropBag = resources.GetString("_grid.PropBag");
             // 
             // panel2
             // 
+            this.panel2.Location = new System.Drawing.Point(0, 328);
+            this.panel2.Size = new System.Drawing.Size(632, 38);
             this.panel2.Visible = false;
             // 
             // dtpBegin
