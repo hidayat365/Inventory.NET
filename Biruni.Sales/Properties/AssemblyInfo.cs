@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sales")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Proxima ERP Sales Library")]
+[assembly: AssemblyDescription("Mutiara Cimanggis, \nBlok F no. 7 RT 06/16, \nCilangkap Tapos Depok, \nJawa Barat Indonesia 16958\nEmail: hidayat365@yahoo.com")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Nur Hidayat")]
-[assembly: AssemblyProduct("Sales")]
+[assembly: AssemblyProduct("Proxima ERP")]
 [assembly: AssemblyCopyright("Copyright © Nur Hidayat 2011")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Proxima ERP")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

@@ -5,20 +5,20 @@
     <Setting Name="visualStyle" Type="System.String" Scope="User">
       <Value Profile="(Default)">Blue</Value>
     </Setting>
-    <Setting Name="dbServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">(local)\sqlexpress</Value>
-    </Setting>
     <Setting Name="dbName" Type="System.String" Scope="User">
       <Value Profile="(Default)">dbInventory</Value>
     </Setting>
+    <Setting Name="webSite" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.birunilabs.com</Value>
+    </Setting>
+    <Setting Name="dbServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(local)\sqlexpress</Value>
+    </Setting>
     <Setting Name="dbUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sax</Value>
+      <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="dbPassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">pYxwDZ21Y+M=</Value>
-    </Setting>
-    <Setting Name="webSite" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://www.Biruniech.com</Value>
+      <Value Profile="(Default)">sql</Value>
     </Setting>
   </Settings>
 </SettingsFile>

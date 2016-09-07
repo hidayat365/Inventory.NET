@@ -37,18 +37,6 @@ namespace Biruni.FE.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("(local)\\sqlexpress")]
-        public string dbServer {
-            get {
-                return ((string)(this["dbServer"]));
-            }
-            set {
-                this["dbServer"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("dbInventory")]
         public string dbName {
             get {
@@ -61,7 +49,31 @@ namespace Biruni.FE.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sax")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.birunilabs.com")]
+        public string webSite {
+            get {
+                return ((string)(this["webSite"]));
+            }
+            set {
+                this["webSite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("(local)\\sqlexpress")]
+        public string dbServer {
+            get {
+                return ((string)(this["dbServer"]));
+            }
+            set {
+                this["dbServer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
         public string dbUser {
             get {
                 return ((string)(this["dbUser"]));
@@ -73,25 +85,13 @@ namespace Biruni.FE.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pYxwDZ21Y+M=")]
+        [global::System.Configuration.DefaultSettingValueAttribute("sql")]
         public string dbPassword {
             get {
                 return ((string)(this["dbPassword"]));
             }
             set {
                 this["dbPassword"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.Biruniech.com")]
-        public string webSite {
-            get {
-                return ((string)(this["webSite"]));
-            }
-            set {
-                this["webSite"] = value;
             }
         }
     }
